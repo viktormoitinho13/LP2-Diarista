@@ -24,8 +24,12 @@
       Sobrenome: <input type ="text" value= "<?php echo $linha['sobrenome'] ?> " readonly></br> <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
       Endereco: <input type ="text" value= "<?php echo $linha['endereco'] ?> " readonly></br> <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
       Salario: <input type ="text" value= "<?php echo $linha['salario'] ?> " readonly></br></br> <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-          <button><a href=#>Editar</a></button>
-          <button><a href=#>Apagar</a></button><br/>
+          
+          <button>
+
+            <a href="excluirRegistro.php?id=<?php echo $linha['id'] ; ?>">Apagar </a> <!--Cria um link que irá mandar o id para a página de exclusão(excluirRegistro.php) -->
+
+          </button><br/>
     </div>
 
     <?php  
@@ -33,6 +37,7 @@
     ?>
     
     <br/><button><a href ='index.php'>Voltar a página inicial</a> </button>
+
 
 
   </body>

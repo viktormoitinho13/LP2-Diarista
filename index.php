@@ -23,11 +23,18 @@
 
       
       <input type="submit" name="enviar" value="Enviar">
-      <br/>    <br/>
+      <button> <a href ='exibirRegistros.php'>Registros</a> </button>
+
+    </form>
+    <br>
+
+    <form action="buscarregistro.php" method="POST">
+    <label>Digite o nome da Diarista:  </label>
+    <input type="text" name="nomebusca" > <br>
+    <button type="submit">Buscar</button>
 
 
-     <button> <a href ='exibirRegistros.php'>Registros</a> </button>
-
+    
     </form>
   </body>
 </html>
