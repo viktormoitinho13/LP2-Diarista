@@ -2,7 +2,7 @@
 
     if($_POST['nome'] != "") // Executa as ações abaixo caso o texto que vir da input de name "nome" for diferente de vazio
     {
-        include_once 'conexao.php'; // incluí no arquivo os dados do arquivo conexao.php
+        include_once '../conexao.php'; // incluí no arquivo os dados do arquivo conexao.php
 
         $nome = $_POST['nome'];
         $sobrenome = $_POST['sobrenome'];
@@ -15,7 +15,7 @@
 
         echo "dados cadastrados </br>";
 
-        echo "<a href ='index.php'>Voltar a página inicial</a> ";
+        echo "<a href ='../index.php'>Voltar a página inicial</a> ";
 
 
 

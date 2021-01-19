@@ -1,6 +1,6 @@
 <?php
 
-include_once 'conexao.php';
+include_once '../conexao.php';
 
 $ID = $_POST['editarId'];
 $nome = $_POST['editarNome'];
@@ -19,14 +19,11 @@ WHERE id = '$ID';
 
 ";
 
-$executar = mysqli_query( $conn,$alterar); 
+$executar = mysqli_query($conn, $alterar);
 
-if($alterar){
+if ($alterar) {
 
     echo "Dados alterados com sucesso <br/>";
-    echo "<a href ='index.php'>Voltar a página inicial</a> ";
-    
-
+    echo "<a href ='../index.php'>Voltar a página inicial</a> ";
 }
-
 ?>
