@@ -24,6 +24,6 @@ $executar = mysqli_query($conn, $alterar);
 if ($alterar) {
 
     echo "Dados alterados com sucesso <br/>";
-    echo "<a href ='../index.php'>Voltar a página inicial</a> ";
+    echo "<a href ='../cadastroFuncionario.php'>Voltar a página inicial</a> ";
 }
 ?>

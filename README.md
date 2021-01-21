@@ -3,3 +3,5 @@ Projeto em PHP para a disciplina de Linguagem de Programação 2 do Instituto Fe
 
 # Pasta diarista
 Nessa pasta está todo o funcionamento do CRUD de criação, leitura, edição e exclusão das informações das diaristas.
+
+

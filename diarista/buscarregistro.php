@@ -60,7 +60,7 @@
   }
   ?>
 
-  <br /><button><a href='index.php'>Voltar a página inicial</a> </button>
+  <br /><button><a href='../cadastroFuncionario.php'>Voltar a página inicial</a> </button>
 
 
 </body>

@@ -9,7 +9,7 @@ $executar = mysqli_query($conn, $excluir); // cria uma variavel($executar) que e
 if ($executar) {
     echo "registro apagado com sucesso";
     echo "<br>";
-    echo "    <br/><button><a href ='../index.php'>Voltar a página inicial</a> </button> 
-            <br/>     <br/><button><a href ='exibirRegistros.php'>Voltar a página de registros</a> </button>";
+    echo "    <br/><button><a href ='../cadastroFuncionario.php'>Voltar a página inicial</a> </button> 
+            <br/>     <br/><button><a href ='buscarregistro.php'>Voltar a página de registros</a> </button>";
 }
 ?>

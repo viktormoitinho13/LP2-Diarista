@@ -1,13 +1,13 @@
 <?php
 
-    if($_POST['nome'] != "") // Executa as ações abaixo caso o texto que vir da input de name "nome" for diferente de vazio
+    if($_POST['nomediarista'] != "") // Executa as ações abaixo caso o texto que vir da input de name "nome" for diferente de vazio
     {
         include_once '../conexao.php'; // incluí no arquivo os dados do arquivo conexao.php
 
-        $nome = $_POST['nome'];
-        $sobrenome = $_POST['sobrenome'];
-        $endereco = $_POST['endereco'];
-        $salario = $_POST['salario'];
+        $nome = $_POST['nomediarista'];
+        $sobrenome = $_POST['sobrenomediarista'];
+        $endereco = $_POST['enderecodiarista'];
+        $salario = $_POST['salariodiarista'];
 
         $sql = "insert into registro (nome, sobrenome, endereco,salario) values ('$nome','$sobrenome','$endereco','$salario');"; // insere no banco de dados os valores das variáveis acima
 
@@ -15,7 +15,7 @@
 
         echo "dados cadastrados </br>";
 
-        echo "<a href ='../index.php'>Voltar a página inicial</a> ";
+        echo "<a href ='../cadastroFuncionario.php'>Voltar a página inicial</a> ";
 
 
 
