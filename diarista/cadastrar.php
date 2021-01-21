@@ -9,7 +9,7 @@
         $endereco = $_POST['enderecodiarista'];
         $salario = $_POST['salariodiarista'];
 
-        $sql = "insert into registro (nome, sobrenome, endereco,salario) values ('$nome','$sobrenome','$endereco','$salario');"; // insere no banco de dados os valores das variáveis acima
+        $sql = "insert into registro (diarista_nome, diarista_sobrenome, diarista_endereco, diarista_salario) values ('$nome','$sobrenome','$endereco','$salario');"; // insere no banco de dados os valores das variáveis acima
 
         $sql = mysqli_query($conn,$sql); // cria uma variavel($sql) que executa uma busca no banco de dados, buscando os dados da conexão ($conn) e fazendo o comando especificado na variavel acima ($sql)
 

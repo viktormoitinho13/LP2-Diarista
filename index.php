@@ -11,7 +11,9 @@
 
  <a href="cadastroFuncionario.php">Cadastro de funcionarios</a>
  </br>
- <a href="cadastroClientes.php">Cadastro de Clientes</a>
+ </br>
+
+ <a href="cadastroCliente.php">Cadastro de Clientes</a>
 
 
 </body>

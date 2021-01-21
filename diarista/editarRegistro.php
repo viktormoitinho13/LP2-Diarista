@@ -10,10 +10,10 @@ $salario = $_POST['editarSalario'];
 
 $alterar = "
 UPDATE registro
-SET nome = '$nome',
-sobrenome = '$sobrenome',
-endereco = '$endereco',
-salario = '$salario'
+SET diarista_nome = '$nome',
+diarista_sobrenome = '$sobrenome',
+diarista_endereco = '$endereco',
+diarista_salario = '$salario'
 
 WHERE id = '$ID';
 
