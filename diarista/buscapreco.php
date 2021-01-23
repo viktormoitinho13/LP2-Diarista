@@ -4,6 +4,7 @@
 <head>
 <?php include_once '../html/cabecalho.php' ?>
 
+  <meta charset="utf-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registros Personalizados</title>
@@ -15,8 +16,8 @@
 <body>
   <?php
 
-  $nomebuscar = $_POST['nomebusca'];
-  $consulta = "SELECT * FROM cliente where cliente_nome LIKE '%$nomebuscar%' "; // cria uma variavel ($consulta )que irá fazer a consulta no banco de dados
+  $nomebuscar = $_POST['salario'];
+  $consulta = "SELECT * from registro where diarista_salario <= $nomebuscar "; // cria uma variavel ($consulta )que irá fazer a consulta no banco de dados
   $executar = mysqli_query($conn, $consulta); // cria uma variavel($executar) que executa uma busca no banco de dados, buscando os dados da conexão ($conn) e fazendo o comando especificado na variavel acima ($consulta)
   $resultado = mysqli_num_rows($executar);
 
@@ -37,25 +38,18 @@
     <div id="Registros">
       <br />
       <form action="editarRegistro.php" method="POST">
-        ID: <input type="text" name="cliente_id" value="<?php echo $linha['cliente_id'] ?> " readonly></br>
+        ID: <input type="text" name="editarId" value="<?php echo $linha['id'] ?> " readonly></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Nome: <input type="text" name="editarNome" value="<?php echo $linha['cliente_nome'] ?> "></br>
+        Nome: <input type="text" name="editarNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['sobrenome_cliente'] ?> "></br>
+        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['diarista_sobrenome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['endereco_cliente'] ?> "></br>
+        Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Imóvel: <input type="text" name="editarSalario" value="<?php echo $linha['imovel_cliente'] ?> "></br></br>
-        <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        <button type="submit">Alterar</button>
+        Salario: <input type="text" name="editarSalario" value="<?php echo $linha['diarista_salario'] ?> "></br></br>
       </form>
 
-      <button>
-
-        <a href="clienteExcluir.php?cliente_id=<?php echo $linha['cliente_id']; ?>">Apagar </a>
-        <!--Cria um link que irá mandar o id para a página de exclusão(excluirRegistro.php) -->
-
-      </button><br />
+   
     </div>
 
   <?php

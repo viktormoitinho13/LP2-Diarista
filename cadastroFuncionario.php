@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <head>
+<?php include_once 'html/cabecalho.php' ?>
+
   <meta charset="utf-8">
   <title> Diarista - Projeto LP2 </title>
 </head>
