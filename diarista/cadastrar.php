@@ -25,7 +25,7 @@ $cf->cadastrar();
     endereco:<?php echo $cf->endereco;?><br/>
     salario:<?php echo $cf->salario;?><br/>
 
-    <form action="index.php" method=get><input type=submit value="Voltar"></form>
+    <br /><button><a href='../index.php'>Voltar a página inicial</a> </button>
 
 
 </body>

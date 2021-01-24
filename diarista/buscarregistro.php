@@ -41,7 +41,7 @@
         
         Nome: <input type="text" name="editarNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['diarita_sobrenome'] ?> "></br>
+        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['diarista_sobrenome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
