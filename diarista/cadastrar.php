@@ -1,35 +1,38 @@
 <?php
+include_once '../conexao.php';
+include('../classes/classediarista.php');
 
-    if($_POST['nomediarista'] != "") // Executa as ações abaixo caso o texto que vir da input de name "nome" for diferente de vazio
-    {
-        include_once '../conexao.php'; // incluí no arquivo os dados do arquivo conexao.php
+$cf = new cadastro_diarista();
+$cf->nome = $_POST["nomediarista"];
+$cf->sobrenome = $_POST["sobrenomediarista"];
+$cf->endereco = $_POST["enderecodiarista"];
+$cf->salario = (float) $_POST["salariodiarista"];
 
-        $nome = $_POST['nomediarista'];
-        $sobrenome = $_POST['sobrenomediarista'];
-        $endereco = $_POST['enderecodiarista'];
-        $salario = $_POST['salariodiarista'];
-
-        $sql = "insert into registro (diarista_nome, diarista_sobrenome, diarista_endereco, diarista_salario) values ('$nome','$sobrenome','$endereco','$salario');"; // insere no banco de dados os valores das variáveis acima
-
-        $sql = mysqli_query($conn,$sql); // cria uma variavel($sql) que executa uma busca no banco de dados, buscando os dados da conexão ($conn) e fazendo o comando especificado na variavel acima ($sql)
-
-        echo "dados cadastrados </br>";
-
-        echo "<a href ='../cadastroFuncionario.php'>Voltar a página inicial</a> ";
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
+$cf->cadastrar();
 
 ?>
 
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Cadastro</h1>
+
+    nome: <?php echo $cf->nome;?> <br/>
+    sobrenome:<?php echo $cf->sobrenome; ?><br/>
+    endereco:<?php echo $cf->endereco;?><br/>
+    salario:<?php echo $cf->salario;?><br/>
+
+    <form action="index.php" method=get><input type=submit value="Voltar"></form>
+
+
+</body>
+<?php
+ $sql = "insert into registro (diarista_nome, diarista_sobrenome, diarista_endereco, diarista_salario) values ('$cf->nome','$cf->sobrenome','$cf->endereco','$cf->salario');"; // insere no banco de dados os valores das variáveis acima
+
+ $sql = mysqli_query($conn,$sql);
+?>
+
+</html>

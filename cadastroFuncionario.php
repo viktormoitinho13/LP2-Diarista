@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-<?php include_once 'html/cabecalho.php' ?>
+  <?php include_once 'html/cabecalho.php' ?>
 
   <meta charset="utf-8">
   <title> Diarista - Projeto LP2 </title>
@@ -11,7 +11,9 @@
 <body>
   <h3>Formulário de Cadastro de funcionaria</h3><br>
 
-  <form name="Cadastro" action="diarista/cadastrar.php" method="POST">
+ <!-- <form name="Cadastro" action="diarista/cadastrar.php" method="POST"> -->
+ <form name="Cadastro" action="diarista/cadastrar.php" method="POST">
+
     <label>Nome da funcionaria: </label>
     <input type="text" name="nomediarista"><br>
 
@@ -42,3 +44,9 @@
 </body>
 
 </html>
+
+
+
+
+    
+    

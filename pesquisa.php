@@ -9,14 +9,10 @@
 
 <body>
     <form action="diarista/buscapreco.php" method="POST">
-        <label>Média salarial </label>
+        <label>Valor oferecido </label>
         <input type="text" name="salario"> <br>
 
-        <label>Tipo de imóvel: </label>
-        <select name="imovelcliente">
-            <option value="casa">Casa</option>
-            <option value="apartamento">Apartamento</option>
-            <option value="kitnet">Kitnet</option>
+       
 
         </select>
         <input type="submit" name="enviar" value="Enviar">

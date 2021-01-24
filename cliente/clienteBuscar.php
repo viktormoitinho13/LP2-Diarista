@@ -37,8 +37,7 @@
     <div id="Registros">
       <br />
       <form action="editarRegistro.php" method="POST">
-        ID: <input type="text" name="cliente_id" value="<?php echo $linha['cliente_id'] ?> " readonly></br>
-        <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
+       
         Nome: <input type="text" name="editarNome" value="<?php echo $linha['cliente_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['sobrenome_cliente'] ?> "></br>

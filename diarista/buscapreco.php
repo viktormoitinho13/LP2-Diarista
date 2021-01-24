@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<?php include_once '../html/cabecalho.php' ?>
+  <?php include_once '../html/cabecalho.php' ?>
 
   <meta charset="utf-8">
   <meta charset="UTF-8">
@@ -16,8 +16,8 @@
 <body>
   <?php
 
-  $nomebuscar = $_POST['salario'];
-  $consulta = "SELECT * from registro where diarista_salario <= $nomebuscar "; // cria uma variavel ($consulta )que irá fazer a consulta no banco de dados
+  $salariobuscar = $_POST['salario'];
+  $consulta = "SELECT * from registro where diarista_salario <= $salariobuscar "; // cria uma variavel ($consulta )que irá fazer a consulta no banco de dados
   $executar = mysqli_query($conn, $consulta); // cria uma variavel($executar) que executa uma busca no banco de dados, buscando os dados da conexão ($conn) e fazendo o comando especificado na variavel acima ($consulta)
   $resultado = mysqli_num_rows($executar);
 
@@ -35,28 +35,38 @@
 
   ?>
 
-    <div id="Registros">
+    <div id="contratos">
       <br />
-      <form action="editarRegistro.php" method="POST">
-        ID: <input type="text" name="editarId" value="<?php echo $linha['id'] ?> " readonly></br>
+      <form action="contratar.php" method="POST">
+
+        Nome: <input type="text" name="contratoNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Nome: <input type="text" name="editarNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
+        Sobrenome: <input type="text" name="contratoSobre" value="<?php echo $linha['diarista_sobrenome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['diarista_sobrenome'] ?> "></br>
+        Endereco: <input type="text" name="contratoEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
-        <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Salario: <input type="text" name="editarSalario" value="<?php echo $linha['diarista_salario'] ?> "></br></br>
+        Salario: <input type="text" name="contratoSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
+
+        </br>
+
+        <input type=submit value="Contratar" />
+
       </form>
 
-   
+
     </div>
 
   <?php
   }
   ?>
 
-  <br /><button><a href='../cadastroFuncionario.php'>Voltar a página inicial</a> </button>
+  
+
+ 
+
+
+
+  <br /><button><a href='../index.php'>Voltar a página inicial</a> </button>
 
 
 </body>
