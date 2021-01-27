@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="diarista/buscapreco.php" method="POST">
+    <form action="contrato/buscapreco.php" method="POST">
         <label>Valor oferecido </label>
         <input type="text" name="salario"> <br>
 

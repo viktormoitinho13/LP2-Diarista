@@ -2,13 +2,19 @@
 include_once '../conexao.php';
 include('../classes/classediarista.php');
 
-$cf = new cadastro_diarista();
-$cf->nome = $_POST["nomediarista"];
-$cf->sobrenome = $_POST["sobrenomediarista"];
-$cf->endereco = $_POST["enderecodiarista"];
-$cf->salario = (float) $_POST["salariodiarista"];
+$cf = new cadastro_diarista($nome, $sobrenome,$endereco,$salario);
+echo "Nome: " .$cf->nome = $_POST["nomediarista"];
+echo "</br>";
+echo "Sobrenome: ".$cf->sobrenome = $_POST["sobrenomediarista"];
+echo "</br>";
+echo "Endereço: " .$cf->endereco = $_POST["enderecodiarista"];
+echo "</br>";
+echo "salario: ".$cf->salario = $_POST["salariodiarista"];
+echo "</br>";
 
 $cf->cadastrar();
+
+
 
 ?>
 
@@ -18,12 +24,7 @@ $cf->cadastrar();
 </head>
 
 <body>
-    <h1>Cadastro</h1>
-
-    nome: <?php echo $cf->nome;?> <br/>
-    sobrenome:<?php echo $cf->sobrenome; ?><br/>
-    endereco:<?php echo $cf->endereco;?><br/>
-    salario:<?php echo $cf->salario;?><br/>
+   
 
     <br /><button><a href='../index.php'>Voltar a página inicial</a> </button>
 

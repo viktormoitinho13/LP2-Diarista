@@ -7,6 +7,16 @@
         var $salario;
         var $situacao;
 
+        function __construct($nome,$sobrenome, $endereco,$salario)
+        {
+          $this->nome = $nome;
+          $this->sobrenome = $sobrenome;
+          $this->endereco = $endereco;
+          $this->salario = $salario;
+
+         
+
+        }
         function cadastrar(){
           if ($this->salario != 0)
             $this->situacao = "Cadastro realizado com sucesso";

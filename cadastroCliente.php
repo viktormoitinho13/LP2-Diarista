@@ -28,7 +28,7 @@
 
 
         </select>
-        <br>
+        </br>
 
 
         <input type="submit" name="enviar" value="Enviar">
