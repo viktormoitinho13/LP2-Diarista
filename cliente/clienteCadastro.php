@@ -2,10 +2,17 @@
 include_once '../conexao.php';
 include('../classes/classecliente.php');
 
+
 $cf = new cadastro_cliente($nome,$sobrenome,$endereco,$imovel);
-echo "Sobrenome: ".$cf->sobrenome = $_POST["clientesobrenome"]. "</br>";
-echo "Endereço: " .$cf->endereco = $_POST["clienteendereco"]. "<br/>";
-echo "Imovel: ".$cf->imovel = $_POST["imovelcliente"]."<br/>";
+echo "Nome: ".$cf->nome = $_POST["clientenome"];
+echo "</br>";
+echo "Sobrenome: ".$cf->sobrenome = $_POST["clientesobrenome"];
+echo "</br>";
+echo "Endereço: " .$cf->endereco = $_POST["clienteendereco"];
+echo "</br>";
+echo "Imovel: ".$cf->imovel = $_POST["imovelcliente"];
+echo "</br>";
+
 
 $cf->cadastrar();
 

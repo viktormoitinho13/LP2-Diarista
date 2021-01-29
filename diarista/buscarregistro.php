@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<?php include_once '../html/cabecalho.php' ?>
+  <?php include_once '../html/cabecalho.php' ?>
 
   <meta charset="utf-8">
   <meta charset="UTF-8">
@@ -38,14 +38,28 @@
     <div id="Registros">
       <br />
       <form action="editarRegistro.php" method="POST">
-        
+
         Nome: <input type="text" name="editarNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['diarista_sobrenome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Salario: <input type="text" name="editarSalario" value="<?php echo $linha['diarista_salario'] ?> "></br></br>
+        Pretenção salarial: <input type="text" name="editarSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
+
+        Serviço ofertado: <select name="servicodiarista">
+          <option selected value="<?php echo $linha['diarista_servico'] ?> "><?php echo $linha['diarista_servico'] ?> </option>
+          <option value="faxina">Faxina</option>
+          <option value="cozinha">Cozinheira</option>
+          <option value="baba">Babá</option>
+        </select>
+
+
+
+
+
+
+        </br></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         <button type="submit">Alterar</button>
       </form>

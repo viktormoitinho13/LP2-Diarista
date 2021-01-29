@@ -44,7 +44,7 @@
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['endereco_cliente'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Imóvel: <input type="text" name="editarSalario" value="<?php echo $linha['imovel_cliente'] ?> "></br></br>
+        Imóvel: <input type="text" name="editarImovel" value="<?php echo $linha['imovel_cliente'] ?> "></br></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         <button type="submit">Alterar</button>
       </form>

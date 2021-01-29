@@ -16,14 +16,18 @@
 
          
 
-        }
+       }
 
         function cadastrar(){
-          if ($this->salario != 0)
-            $this->situacao = "Cadastro realizado com sucesso";
-            if ($this->salario === 0)
-            $this->situacao = "Cadastro não realizado ";
-            return $this->situacao;
+          if (empty($_POST['clientenome'])) {
+            session_start();
+            
+            echo  $_SESSION['msg_alerta'] = "Você deve preencher ao menos um campo!" ;
+
+            header("Location: ../index.php");
+            exit();
+        }; 
 
         }
       }
+

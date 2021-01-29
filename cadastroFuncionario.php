@@ -10,8 +10,8 @@
 <body>
   <h3>Formulário de Cadastro de funcionaria</h3><br>
 
- <!-- <form name="Cadastro" action="diarista/cadastrar.php" method="POST"> -->
- <form name="Cadastro" action="diarista/cadastrar.php" method="POST">
+  <!-- <form name="Cadastro" action="diarista/cadastrar.php" method="POST"> -->
+  <form name="Cadastro" action="diarista/cadastrar.php" method="POST">
 
     <label>Nome da funcionaria: </label>
     <input type="text" name="nomediarista"><br>
@@ -22,9 +22,17 @@
     <label>endereco da funcionaria: </label>
     <input type="text" name="enderecodiarista"><br>
 
-    <label>salario da funcionaria: </label>
-    <input type="text" name="salariodiarista"><br>
+    <label>Pretenção de salario: (Diária) </label>
+    <input type="number" name="salariodiarista"><br>
 
+    <label>Serviço ofertado: </label>
+    <select name="servicodiarista">
+    <option selected disabled value="">Selecione</option>
+      <option value="faxina">Faxina</option>
+      <option value="cozinha">Cozinheira</option>
+      <option value="baba">Babá</option>
+    </select>
+    </br>
 
     <input type="submit" name="enviar" value="Enviar">
 
@@ -43,9 +51,3 @@
 </body>
 
 </html>
-
-
-
-
-    
-    
