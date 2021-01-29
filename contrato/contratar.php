@@ -17,9 +17,9 @@ echo "</br>";
 echo "Serviço ofertado: ".$cf->servico = $_POST["servicodiarista"];
 echo "</br>";
 
-$t = new trabalho($trabalho);
+$t = new trabalho($trabalho,$total);
 
-echo "Horas: " .$t->trabalho = $_POST["contratohoras"];
+echo "Horas: " .$t->trabalho = $_POST["contratohoras"]."</br>";
 
 
 
