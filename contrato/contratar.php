@@ -19,7 +19,7 @@ echo "</br>";
 
 $t = new trabalho($trabalho,$total);
 
-echo "Horas: " .$t->trabalho = $_POST["contratohoras"]."</br>";
+echo "Horas: " .$t->trabalho = $_POST["contratohoras"];
 
 
 
