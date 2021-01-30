@@ -4,17 +4,21 @@ include('../classes/classecliente.php');
 
 
 $cf = new cadastro_cliente($nome,$sobrenome,$endereco,$imovel);
-echo "Nome: ".$cf->nome = $_POST["clientenome"];
+$cf->nome = $_POST["clientenome"];
 echo "</br>";
-echo "Sobrenome: ".$cf->sobrenome = $_POST["clientesobrenome"];
+$cf->sobrenome = $_POST["clientesobrenome"];
 echo "</br>";
-echo "Endereço: " .$cf->endereco = $_POST["clienteendereco"];
+$cf->endereco = $_POST["clienteendereco"];
 echo "</br>";
-echo "Imovel: ".$cf->imovel = $_POST["imovelcliente"];
+$cf->imovel = $_POST["imovelcliente"];
 echo "</br>";
 
 
 $cf->cadastrar();
+
+echo "<script>alert('Cliente cadastrado!');
+window.location.href = '../cadastroCliente.php'
+</script>  ";
 
 ?>
 
@@ -25,7 +29,6 @@ $cf->cadastrar();
 
 <body>
    
-    <br /><button><a href='../index.php'>Voltar a página inicial</a> </button>
 
 
 </body>

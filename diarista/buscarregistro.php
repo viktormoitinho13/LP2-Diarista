@@ -15,6 +15,8 @@
 </head>
 
 <body>
+<h1>Registros de funcionarios </h1></br>
+
   <?php
 
   $nomebuscar = $_POST['nomebusca'];
@@ -58,11 +60,7 @@
         </select>
 
 
-
-
-
-
-        </br></br>
+        </br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         <button type="submit">Alterar</button>
       </form>
@@ -72,7 +70,7 @@
         <a href="excluirRegistro.php?id=<?php echo $linha['id']; ?>">Apagar </a>
         <!--Cria um link que irá mandar o id para a página de exclusão(excluirRegistro.php) -->
 
-      </button><br />
+      </button><br /></br>
     </div>
 
   <?php

@@ -11,15 +11,15 @@ include('../classes/classecliente.php');
 
 
 $cf = new cadastro_diarista($nome, $sobrenome,$endereco,$salario,$servico);
-echo "Nome: " .$cf->nome = $_POST["contratoNome"];
+$cf->nome = $_POST["contratoNome"];
 echo "</br>";
-echo "Sobrenome: ".$cf->sobrenome = $_POST["contratoSobre"];
+$cf->sobrenome = $_POST["contratoSobre"];
 echo "</br>";
-echo "Endereço: " .$cf->endereco = $_POST["contratoEndereco"];
+$cf->endereco = $_POST["contratoEndereco"];
 echo "</br>";
-echo "Pretenção salarial: ".$cf->salario = $_POST["contratoSalario"];
+$cf->salario = $_POST["contratoSalario"];
 echo "</br>";
-echo "Serviço ofertado: ".$cf->servico = $_POST["servicodiarista"];
+$cf->servico = $_POST["servicodiarista"];
 echo "</br>";
 
 $t = new trabalho($trabalho,$trabalhoreceber,$idcliente);
@@ -31,18 +31,20 @@ $cl = new cadastro_cliente($nome,$sobrenome,$endereco,$imovel);
 
 
 
-echo "Horas: " .$t->trabalho = $_POST["contratohoras"];
+$t->trabalho = $_POST["contratohoras"];
 
 echo "</br>";
 
 
-echo "Valor a receber: ".$t->trabalhoreceber = $t->trabalho * $cf->salario; 
+$t->trabalhoreceber = $t->trabalho * $cf->salario; 
 
 echo "</br>";
 
-echo "Registro do cliente: " .$t->idcliente = $_POST["idcliente"];
+$t->idcliente = $_POST["idcliente"];
 
-
+echo "<script>alert('Diarista contratada com sucesso!');
+window.location.href = '../index.php'
+</script>  ";
 
 
 ?>

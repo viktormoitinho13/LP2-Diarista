@@ -4,17 +4,20 @@ include('../classes/classediarista.php');
 
 
 $cf = new cadastro_diarista($nome, $sobrenome,$endereco,$salario,$servico);
-echo "Nome: " .$cf->nome = $_POST["nomediarista"];
+$cf->nome = $_POST["nomediarista"];
 echo "</br>";
-echo "Sobrenome: ".$cf->sobrenome = $_POST["sobrenomediarista"];
+$cf->sobrenome = $_POST["sobrenomediarista"];
 echo "</br>";
-echo "Endereço: " .$cf->endereco = $_POST["enderecodiarista"];
+$cf->endereco = $_POST["enderecodiarista"];
 echo "</br>";
-echo "Pretenção salarial: ".$cf->salario = $_POST["salariodiarista"];
+$cf->salario = $_POST["salariodiarista"];
 echo "</br>";
-echo "Serviço ofertado: ".$cf->servico = $_POST["servicodiarista"];
+$cf->servico = $_POST["servicodiarista"];
 echo "</br>";
 
+echo "<script>alert('Funcionario cadastrado!');
+window.location.href = '../cadastroFuncionario.php'
+</script>  ";
 
 ?>
 

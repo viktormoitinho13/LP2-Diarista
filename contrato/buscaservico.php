@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-  <?php include_once '../html/cabecalho.php' ?>
 
   <meta charset="utf-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/formulario.css" media="screen">
+
   <title>Registros Personalizados</title>
   <?php
   include_once '../conexao.php';
@@ -14,6 +15,8 @@
 </head>
 
 <body>
+<h1>Contrato de funcionarios </h1></br>
+
   <?php
 
   $servicobuscar = $_POST['servicodiarista'];
@@ -35,9 +38,10 @@
 
   ?>
 
-    <div id="contratos">
+<div class="campo">
       <br />
       <form action="contratar.php" method="POST">
+      <h3>Diarista</h3></br>
 
         Nome: <input type="text" name="contratoNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
@@ -45,16 +49,16 @@
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Endereco: <input type="text" name="contratoEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Pretenção salarial: <input type="number" name="contratoSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
-
+        Salario(diaria): </br><input type="text" name="contratoSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
+        </br>
         Serviço ofertado: <select name="servicodiarista">
           <option selected disable value="<?php echo $linha['diarista_servico'] ?> "><?php echo $linha['diarista_servico'] ?> </option>
          
         </select></br>
 
-        Horas Diárias: <input type="number" name="contratohoras" required></br>
-
-        Registro do cliente: <input type="number" name="idcliente" required></br>
+        Horas Diárias: </br><input type="number" name="contratohoras" required></br>
+        </br>
+        Registro do cliente:</br>  <input type="number" name="idcliente" required></br>
 
 
         </br>
@@ -63,7 +67,7 @@
 
       </form>
 
-
+      </br>
     </div>
 
   <?php

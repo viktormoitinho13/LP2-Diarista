@@ -15,6 +15,8 @@
 </head>
 
 <body>
+<h1>Registros de clientes </h1></br>
+
   <?php
 
   $nomebuscar = $_POST['nomebusca'];
@@ -37,6 +39,7 @@
   ?>
 
 <div class="campo">
+
       <br />
       <form action="editarcliente.php" method="POST">
 
@@ -48,7 +51,7 @@
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['endereco_cliente'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Imóvel: <input type="text" name="editarImovel" value="<?php echo $linha['imovel_cliente'] ?> "></br></br>
+        Imóvel: <input type="text" name="editarImovel" value="<?php echo $linha['imovel_cliente'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         <button type="submit">Alterar</button>
       </form>
@@ -58,7 +61,7 @@
         <a href="clienteExcluir.php?cliente_id=<?php echo $linha['cliente_id']; ?>">Apagar </a>
         <!--Cria um link que irá mandar o id para a página de exclusão(excluirRegistro.php) -->
 
-      </button><br />
+      </button><br/><br/>
     </div>
 
   <?php
