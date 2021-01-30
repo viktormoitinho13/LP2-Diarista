@@ -5,6 +5,7 @@
         var $sobrenome;
         var $endereco;
         var $imovel;
+        var $situacao;
 
         function __construct($nome,$sobrenome, $endereco,$imovel)
         {

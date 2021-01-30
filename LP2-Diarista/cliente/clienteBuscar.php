@@ -6,8 +6,6 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="../css/formulario.css" media="screen">
-
   <title>Registros Personalizados</title>
   <?php
   include_once '../conexao.php';
@@ -36,7 +34,7 @@
 
   ?>
 
-<div class="campo">
+    <div id="Registros">
       <br />
       <form action="editarcliente.php" method="POST">
 
@@ -65,8 +63,7 @@
   }
   ?>
 
-
-  <br/> <button><a href='../cadastroCliente.php'>Voltar a página de cadastro</a> </button>
+  <br /><button><a href='../cadastroFuncionario.php'>Voltar a página inicial</a> </button>
 
 
 </body>

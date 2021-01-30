@@ -1,0 +1,75 @@
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos com o ID "titulo" */
+
+
+#check{
+    display: inline-block;
+}
+
+
+
+/* Elemento de tag <body> */
+body{
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #42929d;
+    margin-left: 40%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+h1 {
+    margin-left: -01em;
+
+
+}
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #42979d;
+    border-radius: 5px;
+}
+
+
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+    padding-right: 1em;
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #E0E0F8;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #42979d;
+    font-size: 25px;
+
+	}
+a:hover {
+	text-decoration: none; 
+	color: #214b4e;
+	}
+a:active {
+    text-decoration: none;
+    color: #f00;
+
+	}

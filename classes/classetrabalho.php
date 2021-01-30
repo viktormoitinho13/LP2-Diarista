@@ -2,13 +2,17 @@
     class trabalho extends cadastro_diarista {
 
         var $trabalho;
-        var $total;
+        var $trabalhoreceber;
+        var $idcliente;
+
         
 
-        function __construct($trabalho,$total)
+        function __construct($trabalho,$trabalhoreceber,$idcliente)
         {
           $this->trabalho = $trabalho;
-          $this->total = $total;
+          $this->trabalhoreceber = $trabalhoreceber;
+          $this->idcliente = $idcliente;
+
         }
 
        

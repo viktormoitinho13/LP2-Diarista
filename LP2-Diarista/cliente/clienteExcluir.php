@@ -7,8 +7,10 @@ $excluindo = "delete from cliente where cliente_id = '$cof'"; // cria uma variav
 $executar = mysqli_query($conn, $excluindo); // cria uma variavel($executar) que executa uma busca no banco de dados, buscando os dados da conexão ($conn) e fazendo o comando especificado na variavel acima ($excluir)
 
 if ($executar) {
-    echo "<script>alert('Registro apagado!');
-    window.location.href = '../cadastroCliente.php'
-</script>  ";}
+    echo "registro apagado com sucesso";
+    echo "<br>";
+    echo "    <br/><button><a href ='../cadastroCliente.php'>Voltar a página inicial</a> </button> 
+            <br/>     <br/><button><a href ='clienteBuscar.php'>Voltar a página de registros</a> </button>";
+}
 ?>
 

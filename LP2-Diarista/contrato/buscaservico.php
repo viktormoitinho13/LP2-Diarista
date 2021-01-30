@@ -45,17 +45,14 @@
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         Endereco: <input type="text" name="contratoEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Pretenção salarial: <input type="number" name="contratoSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
+        Pretenção salarial: <input type="text" name="contratoSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
 
         Serviço ofertado: <select name="servicodiarista">
           <option selected disable value="<?php echo $linha['diarista_servico'] ?> "><?php echo $linha['diarista_servico'] ?> </option>
          
         </select></br>
 
-        Horas Diárias: <input type="number" name="contratohoras" required></br>
-
-        Registro do cliente: <input type="number" name="idcliente" required></br>
-
+        Horas Diárias: <input type="text" name="contratohoras"></br>
 
         </br>
 

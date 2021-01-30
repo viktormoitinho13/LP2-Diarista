@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-  <?php include_once '../html/cabecalho.php' ?>
 
   <meta charset="utf-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/formulario.css" media="screen">
+
   <title>Registros Personalizados</title>
   <?php
   include_once '../conexao.php';
@@ -26,7 +27,7 @@
     echo "<script>alert('Registro localizado com sucesso!') </script>  ";
   } else {
     echo "<script>alert('Registro não localizado com sucesso!');
-                window.location.href = '../index.php'
+                window.location.href = '../cadastroFuncionario.php'
         </script>  ";
   }
 
@@ -35,9 +36,11 @@
 
   ?>
 
-    <div id="Registros">
+<div class="campo">
       <br />
       <form action="editarRegistro.php" method="POST">
+
+      Registro: <input type="text"  name="editarID" value="<?php echo $linha['id'] ?> "></br>
 
         Nome: <input type="text" name="editarNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->

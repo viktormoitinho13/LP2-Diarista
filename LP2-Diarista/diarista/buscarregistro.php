@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-<?php include_once '../html/cabecalho.php' ?>
+  <?php include_once '../html/cabecalho.php' ?>
 
+  <meta charset="utf-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="../css/formulario.css" media="screen">
-
   <title>Registros Personalizados</title>
   <?php
   include_once '../conexao.php';
@@ -18,7 +17,7 @@
   <?php
 
   $nomebuscar = $_POST['nomebusca'];
-  $consulta = "SELECT * FROM cliente where cliente_nome LIKE '%$nomebuscar%' "; // cria uma variavel ($consulta )que irá fazer a consulta no banco de dados
+  $consulta = "SELECT * FROM registro where diarista_nome LIKE '%$nomebuscar%' "; // cria uma variavel ($consulta )que irá fazer a consulta no banco de dados
   $executar = mysqli_query($conn, $consulta); // cria uma variavel($executar) que executa uma busca no banco de dados, buscando os dados da conexão ($conn) e fazendo o comando especificado na variavel acima ($consulta)
   $resultado = mysqli_num_rows($executar);
 
@@ -36,26 +35,38 @@
 
   ?>
 
-<div class="campo">
+    <div id="Registros">
       <br />
-      <form action="editarcliente.php" method="POST">
+      <form action="editarRegistro.php" method="POST">
 
-        Registro: <input type="text" name="editarID" value="<?php echo $linha['cliente_id'] ?> "></br>
- 
-        Nome: <input type="text" name="editarNome" value="<?php echo $linha['cliente_nome'] ?> "></br>
+        Nome: <input type="text" name="editarNome" value="<?php echo $linha['diarista_nome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['sobrenome_cliente'] ?> "></br>
+        Sobrenome: <input type="text" name="editarSobre" value="<?php echo $linha['diarista_sobrenome'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['endereco_cliente'] ?> "></br>
+        Endereco: <input type="text" name="editarEndereco" value="<?php echo $linha['diarista_endereco'] ?> "></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
-        Imóvel: <input type="text" name="editarImovel" value="<?php echo $linha['imovel_cliente'] ?> "></br></br>
+        Pretenção salarial: <input type="text" name="editarSalario" value="<?php echo $linha['diarista_salario'] ?> "></br>
+
+        Serviço ofertado: <select name="servicodiarista">
+          <option selected value="<?php echo $linha['diarista_servico'] ?> "><?php echo $linha['diarista_servico'] ?> </option>
+          <option value="faxina">Faxina</option>
+          <option value="cozinha">Cozinheira</option>
+          <option value="baba">Babá</option>
+        </select>
+
+
+
+
+
+
+        </br></br>
         <!--Cria um campo input para guardar o valor que foi buscado no banco de dados -->
         <button type="submit">Alterar</button>
       </form>
 
       <button>
 
-        <a href="clienteExcluir.php?cliente_id=<?php echo $linha['cliente_id']; ?>">Apagar </a>
+        <a href="excluirRegistro.php?id=<?php echo $linha['id']; ?>">Apagar </a>
         <!--Cria um link que irá mandar o id para a página de exclusão(excluirRegistro.php) -->
 
       </button><br />
@@ -65,8 +76,7 @@
   }
   ?>
 
-
-  <br/> <button><a href='../cadastroCliente.php'>Voltar a página de cadastro</a> </button>
+  <br /><button><a href='../cadastroFuncionario.php'>Voltar a página inicial</a> </button>
 
 
 </body>
